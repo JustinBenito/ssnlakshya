@@ -10,6 +10,9 @@ import HomePage from './pages/HomePage';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { ROUTES } from './routes';
 import Teams from './pages/Teams';
+import EventsPage from './pages/EventsPage.jsx';
+import MoneyAnimation from './components/MoneyAnimation.jsx';
+import SlickSlider from './components/SlickSlider.jsx';
 
 function App() {
   const handleScroll = (id) => {
@@ -40,6 +43,7 @@ function App() {
         <Routes>
           <Route path={ROUTES.HOME} element={<HomePage />} />
           <Route path={ROUTES.TEAM_PAGE} element={<Teams />} />
+          <Route path="/events" element={<EventsPage />} />
         </Routes>
         {/* Footer */}
         <Footer />

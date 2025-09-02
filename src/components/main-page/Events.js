@@ -1,14 +1,14 @@
 export const Events_main = [
     {
-        title: 'Startup Pitch Night',
-        description: 'An exciting event where students pitch their startup ideas to a panel of judges and get valuable feedback.'
+        title: 'Market Place Maze',
+        description: 'Challenged participants to navigate complex business scenarios and make strategic decisions. Every choice determined progress toward success or setbacks.'
     },
     {
-        title:'Entrepreneurship Workshop',
-        description:'Hands-on workshops with industry experts to learn key entrepreneurial skills like business planning and marketing.'
+        title:'Chronopreneur',
+        description:'An engaging business challenge where creativity met strategy. Participants solved quizzes and built startup concepts within limited timelines.'
     },
     {
-        title:'Networking Mixer',
-        description:'Connect with fellow entrepreneurs, alumni, and industry professionals to build your network.'
+        title:'Sycon',
+        description:'An insightful session with Mr. RR Tamilselvan, Founder of Salem RR Biryani. He shared valuable perspectives on entrepreneurship and growth, inspired by his journey.'
     }
 ]

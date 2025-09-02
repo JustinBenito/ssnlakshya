@@ -5,6 +5,9 @@ import { Events_main } from '../components/main-page/Events';
 import EventCards from '../components/main-page/EventCards';
 import { juniorCoreTeam, seniorCoreTeam } from '../components/main-page/CoreMembers';
 import CoreCards from '../components/main-page/CoreCards';
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 const HomePage = ({ handleScroll }) => {
   return (
@@ -20,14 +23,17 @@ const HomePage = ({ handleScroll }) => {
 <section className="welcome-section animate-section flex justify-center">
   <div className="container">
     <h1 className="welcome-title">Welcome to Lakshya</h1>
-    <p className="welcome-subtitle">
+    <p className="welcome-subtitle mb-16">
       Your journey in entrepreneurship starts here!
     </p>
-    <a href="#membership" className="membership-button">
+    <a href="https://youtu.be/dQw4w9WgXcQ?si=GI3CZn8101iSYMyJ" className="membership-button mt-16 block">
        Get Membership
     </a>
   </div>
 </section>
+
+{/* Divider */}
+     <hr className="my-8 border-t-2 border-gray-300" />
 
       {/* Hero Section */}
       {/* <section className="hero-section animate-section">
@@ -47,6 +53,9 @@ const HomePage = ({ handleScroll }) => {
           </p>
         </div>
       </section>
+      
+      {/* Divider */}
+     <hr className="my-8 border-t-2 border-gray-300" />
 
       {/* Events Section */}
       <section id="events" className="events-section animate-section">
@@ -64,42 +73,86 @@ const HomePage = ({ handleScroll }) => {
         </div>
       </section>
 
+    
+     {/* Divider */}
+     <hr className="my-8 border-t-2 border-gray-300" />
+
       {/* Teams Section */}
-      <section id="teams" className="teams-section animate-section">
-        <div className="container">
-          <h2 className="section-title">The Team</h2>
+     <section className="teams-section animate-section py-12" style={{ backgroundColor: "#2d2d2d" }}>
+  <div className="container">
+    <h2 className="section-title text-3xl font-bold text-center text-orange-800 mb-10">
+      The Team
+    </h2>
 
-          {/* Senior Core Team */}
-          <div className="team-group">
-            <h3 className="team-title">Senior Core Team</h3>
-            <div className="team-grid">
-              {seniorCoreTeam.map((member, index) => (
-                <CoreCards
-                  key={index}
-                  role={member.role}
-                  name={member.name}
-                  description={member.description}
-                />
-              ))}
+    {/* Senior Core Team */}
+    <div className="team-group mb-16">
+      <h3 className="team-title text-2xl font-semibold text-orange-900 mb-6">
+        Senior Core Team
+      </h3>
+      <Slider
+        dots={true}
+        infinite={true}
+        speed={500}
+        slidesToShow={5}
+        slidesToScroll={1}
+        responsive={[
+          { breakpoint: 1280, settings: { slidesToShow: 3 } },
+          { breakpoint: 1024, settings: { slidesToShow: 2 } },
+          { breakpoint: 640, settings: { slidesToShow: 1 } },
+        ]}
+      >
+        {seniorCoreTeam.map((member, index) => (
+          <div key={index} className="p-4">
+            <div className="bg-white rounded-2xl shadow-lg border border-orange-200 overflow-hidden text-center transition-transform hover:scale-105">
+              <img
+                src={member.image}
+                alt={member.name}
+                className="w-full h-52 object-cover"
+              />
+              <div className="p-4 bg-gradient-to-t from-orange-100 via-white to-orange-50">
+                <h4 className="text-lg font-semibold text-orange-900">{member.name}</h4>
+              </div>
             </div>
           </div>
+        ))}
+      </Slider>
+    </div>
 
-          {/* Junior Core Team */}
-          <div className="team-group">
-            <h3 className="team-title">Junior Core Team</h3>
-            <div className="team-grid">
-              {juniorCoreTeam.map((member, index) => (
-                <CoreCards
-                  key={index}
-                  role={member.role}
-                  name={member.name}
-                  description={member.description}
-                />
-              ))}
+    {/* Junior Core Team */}
+    <div className="team-group">
+      <h3 className="team-title text-2xl font-semibold text-orange-900 mb-6">
+        Junior Core Team
+      </h3>
+      <Slider
+        dots={true}
+        infinite={true}
+        speed={500}
+        slidesToShow={5}
+        slidesToScroll={1}
+        responsive={[
+          { breakpoint: 1280, settings: { slidesToShow: 3 } },
+          { breakpoint: 1024, settings: { slidesToShow: 2 } },
+          { breakpoint: 640, settings: { slidesToShow: 1 } },
+        ]}
+      >
+        {juniorCoreTeam.map((member, index) => (
+          <div key={index} className="p-4">
+            <div className="bg-white rounded-2xl shadow-lg border border-orange-200 overflow-hidden text-center transition-transform hover:scale-105">
+              <img
+                src={member.image}
+                alt={member.name}
+                className="w-full h-52 object-cover"
+              />
+              <div className="p-4 bg-gradient-to-t from-orange-100 via-white to-orange-50">
+                <h4 className="text-lg font-semibold text-orange-900">{member.name}</h4>
+              </div>
             </div>
           </div>
-        </div>
-      </section>
+        ))}
+      </Slider>
+    </div>
+  </div>
+</section>
     </div>
   );
 };
