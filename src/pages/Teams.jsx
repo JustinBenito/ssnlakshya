@@ -1,5 +1,5 @@
 import React, { useRef } from 'react';
-import { teams } from '../data/teams';
+import teams from '../data/teams';
 import TeamSection from '../components/TeamSection';
 
 const Teams = () => {
