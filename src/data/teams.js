@@ -9,7 +9,7 @@ export const teams = {
       img: '/src/assets/Vertical head pics/Kiruthika Jayakumar .jpg',
       linkedin: "https://www.linkedin.com/in/kiruthika-jayakumar-804923305/"
     },
-    {
+    { 
       name: "Gokul VS",
       role: "Deputy Head",
       year: "3rd Year",

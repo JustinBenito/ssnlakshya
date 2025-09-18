@@ -23,18 +23,28 @@ const Teams = () => {
         <div className="w-32 h-1 bg-gradient-to-r from-orange-500 to-orange-600 mx-auto rounded-full"></div>
       </div>
 
-      {/* Navigation Bar */}
-      <div className="team-category-btns flex flex-row flex-nowrap justify-center w-full max-w-5xl mx-auto mb-12">
-        {Object.keys(teams).map((teamName, idx, arr) => (
-          <button
-            key={teamName}
-            onClick={() => scrollToSection(teamName)}
-            className={`team-category-btn${idx !== arr.length - 1 ? ' mr-6' : ''}`}
-          >
-            {teamName}
-          </button>
-        ))}
-      </div>
+{/* Navigation Bar */}
+<div className="team-category-btns flex flex-wrap justify-center w-full max-w-5xl mx-auto mb-16 gap-x-8">
+  {Object.keys(teams).map((teamName, idx) => (
+    <button
+      key={teamName}
+      onClick={() => scrollToSection(teamName)}
+      className="
+        px-6 py-2 
+        rounded-full 
+        bg-gradient-to-r from-orange-500 to-orange-6 
+        text-white font-medium 
+        shadow-md 
+        hover:from-orange-600 hover:to-orange-700 
+        transition-all duration-300 ease-in-out 
+        hover:scale-105 
+        focus:ring-2 focus:ring-orange-400 focus:outline-none
+      "
+    >
+      {teamName}
+    </button>
+  ))}
+</div>
 
       {/* Team Sections */}
       <div className="container mx-auto px-4 py-16 text-center">
@@ -53,11 +63,15 @@ const Teams = () => {
           ))}
         </div>
         {/* Footer CTA */}
-        <div className="text-center mt-24">
-          <div className="bg-gradient-to-r from-orange-500 to-orange-600 text-white px-10 py-6 rounded-full inline-block">
-            <p className="text-xl font-semibold">Ready to join our team?</p>
-          </div>
-        </div>
+    <div className="text-center mb-[-200px]">
+  <div className="bg-gradient-to-r from-orange-500 to-orange-6 text-white px-10 py-5 rounded-full inline-block -mt-10">
+    <p className="text-xl font-semibold">Ready to join our team?</p>
+  </div>
+
+  {/* Spacer div to push footer down */}
+  <div className="h-6"></div>
+</div>
+
       </div>
     </div>
   );

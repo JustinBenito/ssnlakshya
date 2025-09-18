@@ -110,6 +110,7 @@ button:focus-visible {
   text-align: center;
   width: 100%;
   margin: 3rem 0;
+  left: 20px;
   max-width: 100%;
 }
 
@@ -118,9 +119,10 @@ button:focus-visible {
   display: grid;
   grid-template-columns: repeat(3, 2fr);
   gap: 4rem;
-  padding: 0 2rem;
+  padding: 9 3rem;
   justify-items: center;
   max-width: 100%;
+  margin-left: -1rem;
 }
 
 /* Card content padding */
@@ -539,7 +541,7 @@ button:focus-visible {
   flex-wrap: nowrap;
   justify-content: center;
   align-items: center;
-  gap: 0;
+  gap: 8;
   text-align: center;
   width: 100%;
   margin-bottom: 2.5rem;
