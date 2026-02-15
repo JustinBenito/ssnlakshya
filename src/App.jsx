@@ -13,6 +13,8 @@ import Teams from './pages/Teams';
 import EventsPage from './pages/EventsPage.jsx';
 import MoneyAnimation from './components/MoneyAnimation.jsx';
 import SlickSlider from './components/SlickSlider.jsx';
+import NeuralNetworkDemo from './pages/NeuralNetworkDemo';
+import AuroraBackgroundDemo from './pages/AuroraBackgroundDemo';
 
 function App() {
   const handleScroll = (id) => {
@@ -44,6 +46,8 @@ function App() {
           <Route path={ROUTES.HOME} element={<HomePage />} />
           <Route path={ROUTES.TEAM_PAGE} element={<Teams />} />
           <Route path="/events" element={<EventsPage />} />
+          <Route path={ROUTES.NEURAL_DEMO} element={<NeuralNetworkDemo />} />
+          <Route path={ROUTES.AURORA_DEMO} element={<AuroraBackgroundDemo />} />
         </Routes>
         {/* Footer */}
         <Footer />

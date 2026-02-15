@@ -1,26 +1,151 @@
+/* ============================================
+   LAKSHYA - GLOBAL STYLES
+   ============================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --animate-aurora: aurora 60s linear infinite;
+  --animate-blob: blob 7s infinite;
+}
+
 :root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
+  --color-white: #ffffff;
+  --color-black: #000000;
+  --color-gray-50: #fafafa;
+  --color-gray-100: #f5f5f5;
+  --color-gray-200: #e5e5e5;
+  --color-gray-300: #d4d4d4;
+  --color-gray-400: #a3a3a3;
+  --color-gray-500: #737373;
+  --color-gray-600: #525252;
+  --color-gray-700: #404040;
+  --color-gray-800: #262626;
+  --color-gray-900: #171717;
+
+  --color-orange-50: #fff7ed;
+  --color-orange-100: #ffedd5;
+  --color-orange-200: #fed7aa;
+  --color-orange-300: #fdba74;
+  --color-orange-400: #fb923c;
+  --color-orange-500: #f97316;
+  --color-orange-600: #ea580c;
+  --color-orange-700: #c2410c;
+
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  line-height: 1.6;
   font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
+  color-scheme: light;
+  color: var(--color-gray-900);
+  background-color: var(--color-white);
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
+/* Aurora Animation Keyframes */
+@keyframes aurora {
+  from {
+    background-position: 50% 50%, 50% 50%;
+  }
+  to {
+    background-position: 350% 50%, 350% 50%;
+  }
+}
+
+/* Blob Animation for SaaS Hero */
+@keyframes blob {
+  0%, 100% {
+    transform: translate(0, 0) scale(1);
+  }
+  33% {
+    transform: translate(30px, -50px) scale(1.1);
+  }
+  66% {
+    transform: translate(-20px, 20px) scale(0.9);
+  }
+}
+
+/* Links */
 a {
   font-weight: 500;
-  color: #ed993a;
-  text-decoration: inherit;
+  color: var(--color-orange-500);
+  text-decoration: none;
+  transition: color 0.2s ease;
 }
+
 a:hover {
-  color: #ed993a;
+  color: var(--color-orange-600);
 }
+
+/* Body */
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+  background-color: var(--color-white);
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1.2;
+  font-weight: 700;
+  color: var(--color-gray-900);
+}
+
+h1 {
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  letter-spacing: -0.02em;
+}
+
+h2 {
+  font-size: clamp(1.5rem, 4vw, 2.5rem);
+}
+
+h3 {
+  font-size: clamp(1.25rem, 3vw, 1.75rem);
+}
+
+/* Gradient Text */
+.gradient-text {
+  background: linear-gradient(135deg, var(--color-orange-400), var(--color-orange-600));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 700;
+}
+
+/* Buttons */
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.625rem 1.25rem;
+  font-size: 0.938rem;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: var(--color-gray-900);
+  color: var(--color-white);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+button:hover {
+  background-color: var(--color-gray-800);
+}
+
+button:focus,
+button:focus-visible {
+  outline: 2px solid var(--color-orange-500);
+  outline-offset: 2px;
+}
+
+/* ============================================
+   WELCOME SECTION SPECIFIC
+   ============================================ */
 
 .welcome-section .container {
   justify-content: center;
@@ -30,228 +155,53 @@ a:hover {
   width: 100%;
 }
 
-.welcome-section .welcome-subtitle {
+/* ============================================
+   TEAM SECTION STYLES
+   ============================================ */
 
-}
-
-.welcome-section .membership-button {
-
-}
-
-.welcome-section .welcome-subtitle::after {
-
-}
-
-body {
-  margin: 0;
-  min-width: 320px;
-  min-height: 100vh;
-  overflow-y: auto; /* Enable vertical scrolling */
-}
-/* Reset default styles */
-
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
-}
-
-.gradient-text {
-  background: linear-gradient(to right, #f0e4dc, #ecd4c7); /* orange-500 to orange-600 */
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  text-fill-color: transparent;
-  left: 150px;
-  font-weight: 700;
-  font-size: 3.75rem;
-  text-align: center;
-}
-
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #ed993a;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
-}
-
-/* Navigation container */
-.nav-container {
-  background: rgba(0, 0, 0, 0.2);
-  backdrop-filter: blur(20px);
-  border: 1px solid rgba(255, 107, 53, 0.3);
-  border-radius: 1rem;
-  padding: 2rem;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-  text-align: center;
-  width: 100%;
-  max-width: 900px;
-  margin: 0 auto;
-}
-
-/* Section styling */
 .team-section {
-  background: rgba(0, 0, 0, 0.2);
+  background: var(--color-gray-900);
   backdrop-filter: blur(20px);
-  border-radius: 32px;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
-  text-align: center;
-  width: 100%;
-  margin: 3rem 0;
-  left: 20px;
-  max-width: 100%;
+  border-radius: 24px;
+  padding: 3rem 2rem;
+  margin: 2rem auto;
+  max-width: 1200px;
 }
 
-/* Grid container for team cards */
 .team-section .grid {
   display: grid;
-  grid-template-columns: repeat(3, 2fr);
-  gap: 4rem;
-  padding: 9 3rem;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
   justify-items: center;
-  max-width: 100%;
-  margin-left: -1rem;
 }
 
-/* Card content padding */
-.card-content {
-  padding: 2.5rem 2rem;
-  text-align: center;
-  flex: 1;
+/* ============================================
+   TEAM CARDS
+   ============================================ */
+
+.team-card {
+  position: relative;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  background: transparent;
+  border: none;
+  border-radius: 20px;
+  overflow: visible;
+  box-shadow: none;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  gap: 1.5rem;
-}
-
-.team-card::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 4px;
-  background: linear-gradient(90deg, #FF6B35, #F7931E, #FF6B35);
-  background-size: 200% 100%;
-  animation: shimmer 3s ease-in-out infinite;
-}
-
-@keyframes shimmer {
-  0%, 100% { background-position: 200% 0; }
-  50% { background-position: -200% 0; }
+  width: 100%;
+  max-width: 340px;
+  height: 420px;
+  cursor: pointer;
 }
 
 .team-card:hover {
-  transform: translateY(-12px) scale(1.02);
-  box-shadow: 0 25px 50px rgba(255, 107, 53, 0.4);
-  border-color: rgba(255, 107, 53, 0.6);
-  margin-top: 0.5rem;
-  margin-bottom: 1.5rem;
+  transform: translateY(-8px);
 }
 
-.team-card:hover::before {
-  animation: shimmer 1s ease-in-out infinite;
-}
-
-/* Profile image container */
-.profile-container {
-  position: relative;
-  margin-bottom: 2rem;
-  flex-shrink: 0;
-  text-align: center;
-  padding-top: 1rem;
-}
-
-.profile-image {
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  margin: 0 auto;
-  display: block;
-  border: 4px solid transparent;
-  background: #222;
-  box-shadow: 0 8px 25px rgba(255, 107, 53, 0.3);
-  transition: all 0.3s ease;
-  object-fit: cover;
-}
-
-.team-card:hover .profile-image {
-  transform: scale(1.1);
-  box-shadow: 0 12px 35px rgba(255, 107, 53, 0.5);
-}
-
-/* Role badge */
-.role-badge {
-  position: absolute;
-  bottom: -10px;
-  left: 50%;
-  transform: translateX(-50%);
-  background: linear-gradient(135deg, #FF6B35, #F7931E);
-  color: white;
-  padding: 8px 18px;
-  border-radius: 20px;
-  font-size: 0.75rem;
-  font-weight: 600;
-  letter-spacing: 0.5px;
-  text-transform: uppercase;
-  box-shadow: 0 4px 15px rgba(255, 107, 53, 0.4);
-  border: 2px solid rgba(255, 255, 255, 0.2);
-  text-align: center;
-  margin-top: 1rem;
-}
-
-/* Grid name styling */
-.grid-name {
-  font-family: 'Courier New', monospace;
-  font-weight: 800;
-  font-size: 1.1rem;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  background: linear-gradient(45deg, #FF6B35, #F7931E);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  margin-bottom: 1.5rem;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  flex-shrink: 0;
-  text-align: center;
-  padding: 0 1rem;
-}
-
-/* Member info styling */
-.member-info {
-  text-align: center;
-  margin-bottom: 1rem;
-}
-
-.member-info p {
-  margin: 0;
-  line-height: 1.4;
-}
-
-/* Better description visibility */
-.team-description {
-  color: #e2e8f0 !important;
-  font-weight: 400;
-  line-height: 1.6;
-  font-size: 0.85rem;
-  text-align: center;
-  padding: 0 1rem;
-  flex: 1;
-  margin-bottom: 1rem;
-}
+/* ============================================
+   FLIP CARD STYLES
+   ============================================ */
 
 .flip-card {
   background: none;
@@ -267,19 +217,25 @@ button:focus-visible {
   position: relative;
   width: 100%;
   height: 100%;
-  transition: transform 0.7s cubic-bezier(0.4,0.2,0.2,1);
+  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
   transform-style: preserve-3d;
 }
 
+.flip-card.flipped .flip-card-inner {
+  transform: rotateY(180deg);
+}
 
-.flip-card-front, .flip-card-back {
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
   position: absolute;
   width: 100%;
   height: 100%;
   backface-visibility: hidden;
-  border-radius: 24px;
-  box-shadow: 0 8px 32px rgba(0,0,0,0.3);
-  background: linear-gradient(145deg, rgba(255,255,255,0.1), rgba(255,255,255,0.05));
+  border-radius: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -288,144 +244,192 @@ button:focus-visible {
 
 .flip-card-front {
   z-index: 2;
+  background: var(--color-white);
+  border: 1px solid var(--color-gray-100);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
 }
 
 .flip-card-back {
   transform: rotateY(180deg);
   z-index: 3;
-  background: linear-gradient(135deg, #1a1a1a 80%, #FF6B35 100%);
-  color: #fff;
-  padding: 2rem 1.5rem;
+  background: linear-gradient(135deg, var(--color-gray-900) 0%, var(--color-black) 100%);
+  color: var(--color-white);
+  padding: 2rem;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
 }
 
-.linkedin-connect-btn {
-  margin-top: 1rem;
-  font-size: 1.1rem;
-  font-weight: 600;
-  border: none;
-  outline: none;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-  transition: background 0.3s;
-}
-
-.linkedin-connect-btn:hover {
-
-}
-
-.linkedin-connect-btn-rect {
+/* Card Content */
+.card-content {
+  padding: 2rem;
+  text-align: center;
+  flex: 1;
   display: flex;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
-  background: transparent;
-  border-radius: 9999px;
-  padding: 0.5rem 1.5rem 0.5rem 0.5rem;
+  gap: 1rem;
+}
+
+/* Profile Container */
+.profile-container {
+  position: relative;
+  margin-bottom: 1rem;
+  flex-shrink: 0;
+  text-align: center;
+}
+
+.profile-image {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  margin: 0 auto;
+  display: block;
+  border: 3px solid var(--color-orange-500);
+  background: var(--color-gray-100);
+  box-shadow: 0 4px 14px rgba(249, 115, 22, 0.3);
+  transition: all 0.3s ease;
+  object-fit: cover;
+}
+
+.team-card:hover .profile-image {
+  transform: scale(1.05);
+  box-shadow: 0 6px 20px rgba(249, 115, 22, 0.4);
+}
+
+/* Grid Name */
+.grid-name {
+  font-weight: 700;
+  font-size: 1.25rem;
+  letter-spacing: -0.01em;
+  color: var(--color-gray-900);
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+.flip-card-back .grid-name {
+  color: var(--color-white);
+  margin-bottom: 1rem;
+  font-size: 1.375rem;
+}
+
+/* Member Info */
+.member-info {
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+
+.member-info p {
+  margin: 0;
+  line-height: 1.4;
+}
+
+.member-role {
+  color: var(--color-orange-500);
+  font-weight: 500;
+  font-size: 0.938rem;
+}
+
+/* Team Description */
+.team-description {
+  color: var(--color-gray-300);
+  font-weight: 400;
+  line-height: 1.6;
+  font-size: 0.938rem;
+  text-align: center;
+  max-width: 280px;
+}
+
+/* LinkedIn Button */
+.linkedin-connect-btn-rect {
+  display: inline-flex;
+  align-items: center;
+  background: var(--color-orange-500);
+  border-radius: 50px;
+  padding: 0.75rem 1.5rem;
   font-weight: 600;
-  font-size: 1.1rem;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+  font-size: 0.938rem;
+  box-shadow: 0 4px 14px rgba(249, 115, 22, 0.3);
   outline: none;
+  border: none;
   min-width: 140px;
-  min-height: 48px;
-  transition: background 0.3s, box-shadow 0.3s, border 0.3s;
-  margin-top: 2.5rem;
+  min-height: 44px;
+  transition: all 0.2s ease;
+  margin-top: 1.5rem;
+  color: var(--color-white);
+  text-decoration: none;
 }
 
 .linkedin-connect-btn-rect:hover {
-  box-shadow: 0 6px 20px  #FF6B35;
+  background: var(--color-orange-600);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(249, 115, 22, 0.4);
 }
 
 .linkedin-logo-circle {
   border-radius: 50%;
-  width: 38px;
-  height: 38px;
+  width: 24px;
+  height: 24px;
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-right: 0.75rem;
 }
 
 .linkedin-connect-text {
-  padding-left: 12px;
-  font-size: 1.1rem;
+  font-size: 0.938rem;
   font-weight: 600;
   letter-spacing: 0.5px;
-  color: white;
+  color: var(--color-white);
 }
 
-.flip-card-back .grid-name {
-  margin-bottom: 1.5rem;
-  font-size: 1.2rem;
-  color: #fff !important;
-  background: none;
-  -webkit-text-fill-color: #fff;
-}
+/* ============================================
+   TEAM CATEGORY NAVIGATION
+   ============================================ */
 
-.flip-card-back .team-description {
-  margin: 0 auto;
-  font-size: 1rem;
-  color: #e2e8f0 !important;
-  font-weight: 400;
-  line-height: 1.6;
+.team-category-btns {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 0.75rem;
   text-align: center;
-  max-width: 90%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 80px;
+  width: 100%;
+  margin-bottom: 3rem;
+  padding: 0 1rem;
 }
 
-.flip-card-back {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+.team-category-btns button {
+  padding: 0.625rem 1.25rem;
+  background: var(--color-white);
+  color: var(--color-gray-700);
+  border-radius: 50px;
+  font-weight: 500;
+  font-size: 0.875rem;
+  border: 1px solid var(--color-gray-200);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  outline: none;
+  transition: all 0.2s ease;
+  cursor: pointer;
 }
 
-.flip-card-inner {
-  transition: transform 0.7s cubic-bezier(0.4,0.2,0.2,1);
+.team-category-btns button:hover,
+.team-category-btns button:focus {
+  background: var(--color-orange-500);
+  color: var(--color-white);
+  border-color: var(--color-orange-500);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(249, 115, 22, 0.3);
 }
 
-/* React-controlled flip */
-.flip-card.flipped .flip-card-inner {
-  transform: rotateY(180deg);
-}
+/* ============================================
+   RESPONSIVE STYLES
+   ============================================ */
 
-/* Hide role badge on card front */
-.role-badge { display: none !important; }
-
-/* Responsive grid adjustments */
 @media (max-width: 1024px) {
   .team-section .grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 1.5rem;
-    padding: 0 1.5rem;
-  }
-  
-  .nav-buttons {
-    gap: 1.5rem;
-  }
-  
-  .nav-button {
-    padding: 0.75rem 1.5rem;
-    font-size: 0.8rem;
-    min-width: 120px;
-  }
-  
-  .centered-header h1 {
-    font-size: 4rem !important;
-  }
-  
-  .team-card {
-    min-height: 400px;
-  }
-  
-  .card-content {
-    padding: 2rem 1.5rem;
-  }
-  
-  .right-section {
-    gap: 15px;
-  }
-  
-  .nav-text {
-    font-size: 12px;
   }
 }
 
@@ -435,183 +439,64 @@ button:focus-visible {
     gap: 1.5rem;
     padding: 0 1rem;
   }
-  
+
   .team-section {
-    margin: 2rem 0.5rem;
+    margin: 1rem 0.5rem;
     padding: 2rem 1rem;
+    border-radius: 16px;
   }
-  
-  .team-section h2 {
-    font-size: 2rem !important;
-  }
-  
-  .team-section h3 {
-    font-size: 1.5rem !important;
-  }
-  
-  .nav-buttons {
-    flex-direction: column;
-    align-items: center;
-    gap: 1rem;
-  }
-  
-  .nav-button {
-    width: 100%;
-    max-width: 200px;
-    margin: 0.25rem;
-    min-width: auto;
-  }
-  
-  .centered-header h1 {
-    font-size: 3rem !important;
-  }
-  
-  .centered-header p {
-    font-size: 1rem !important;
-  }
-  
-  .nav-container {
-    padding: 1.5rem;
-  }
-  
+
   .team-card {
-    min-height: 380px;
-    margin: 0.5rem 0;
+    max-width: 100%;
+    height: 380px;
   }
-  
+
+  .flip-card {
+    min-height: 380px;
+  }
+
   .card-content {
     padding: 1.5rem 1rem;
   }
-  
-  .profile-container {
-    margin-bottom: 1.5rem;
+
+  .profile-image {
+    width: 100px;
+    height: 100px;
   }
-  
+
   .grid-name {
-    margin-bottom: 1rem;
+    font-size: 1.125rem;
   }
-  
-  .header {
-    padding: 0 10px;
+
+  .team-category-btns {
+    gap: 0.5rem;
   }
-  
-  .right-section {
-    gap: 10px;
-    margin-right: 10px;
-  }
-  
-  .nav-text {
-    display: none;
-  }
-  
-  .logo-text {
-    font-size: 16px;
-  }
-  
-  .left-section {
-    margin-left: 10px;
+
+  .team-category-btns button {
+    padding: 0.5rem 1rem;
+    font-size: 0.813rem;
   }
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
+@media (max-width: 480px) {
+  .team-card {
+    height: 360px;
   }
-  a:hover {
-    color: #ed993a;
+
+  .flip-card {
+    min-height: 360px;
   }
-  button {
-    background-color: #f9f9f9;
+
+  .profile-image {
+    width: 90px;
+    height: 90px;
   }
-}
 
-/* Remove glassy-nav-bar container style */
-.team-category-nav.glassy-nav-bar {
-  background: none !important;
-  border: none !important;
-  box-shadow: none !important;
-  padding: 0 !important;
-  margin: 0 0 2.5rem 0 !important;
-}
+  .grid-name {
+    font-size: 1rem;
+  }
 
-.team-category-btns {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  justify-content: center;
-  align-items: center;
-  gap: 8;
-  text-align: center;
-  width: 100%;
-  margin-bottom: 2.5rem;
-}
-
-.team-category-btn {
-  padding: 0.9rem 2.5rem;
-  background: linear-gradient(135deg, #FF6B35 60%, #F7931E 100%);
-  color: #fff;
-  border-radius: 999px;
-  font-weight: 700;
-  font-size: 1.1rem;
-  border: none;
-  box-shadow: 0 2px 12px rgba(255, 107, 53, 0.10);
-  outline: none;
-  min-width: 150px;
-  min-height: 48px;
-  margin: 0;
-  margin-right: 1.5rem;
-  transition: all 0.22s cubic-bezier(0.4,0.2,0.2,1);
-  cursor: pointer;
-  letter-spacing: 0.5px;
-  position: relative;
-}
-.team-category-btn:last-child {
-  margin-right: 0;
-}
-
-.team-category-btn:hover, .team-category-btn:focus {
-  background: linear-gradient(135deg, #F7931E 60%, #FF6B35 100%);
-  color: #fff;
-  box-shadow: 0 6px 24px rgba(255, 107, 53, 0.18);
-  border: none;
-  transform: translateY(-2px) scale(1.04);
-}
-
-.team-category-btn.active {
-  background: #fff;
-  color: #FF6B35;
-  border: 2.5px solid #FF6B35;
-  box-shadow: 0 8px 32px rgba(255, 107, 53, 0.18);
-  z-index: 1;
-}
-
-/* Remove default border from team-card, keep only hover border */
-.team-card {
-  position: relative;
-  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  background: linear-gradient(145deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05));
-  backdrop-filter: blur(20px);
-  /* border: 1px solid rgba(255, 255, 255, 0.2); */
-  border: none;
-  top: -25px;
-  border-radius: 24px;
-  overflow: hidden;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
-  display: flex;
-  flex-direction: column;
-  padding: 1rem;
-  left:240px;
-  height:80px;
-  max-width: 100%;
-}
-
-.team-card:hover {
-  border-color: rgba(255, 107, 53, 0.6) !important;
-  border-width: 1.5px !important;
-  border-style: solid !important;
-}
-
-.flip-card:hover .flip-card-inner {
-  transform: rotateY(180deg);
+  .team-description {
+    font-size: 0.875rem;
+  }
 }
