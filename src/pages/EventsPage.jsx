@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { eventsByCategory } from "../data/eventsData";
+import { eventsByCategory } from "../data/EventsData";
 
 function EventsPage() {
   const [flippedCards, setFlippedCards] = useState({});
