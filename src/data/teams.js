@@ -6,7 +6,7 @@ export const teams = {
       year: "3rd Year",
       department: "ECE",
       desc: "",
-      img: '/src/assets/Vertical head pics/Kiruthika Jayakumar .jpg',
+      img: '/assets/team-photos/vertical-head-pics/Kiruthika_Jayakumar_.jpg',
       linkedin: "https://www.linkedin.com/in/kiruthika-jayakumar-804923305/"
     },
     { 
@@ -15,7 +15,7 @@ export const teams = {
       year: "3rd Year",
       department: "MECH",
       desc: "",
-      img: '/src/assets/Vertical head pics/Gokul VS.jpg',
+      img: '/assets/team-photos/vertical-head-pics/Gokul_VS.jpg',
       linkedin: "https://www.linkedin.com/in/gokul-v-s-a931392b4/"
     }
   ],
@@ -26,7 +26,7 @@ export const teams = {
       year: "3rd Year",
       department: "CSE",
       desc: "",
-      img: '/src/assets/Vertical head pics/Srinidhi_Rajagopal_Editorial.jpg',
+      img: '/assets/team-photos/vertical-head-pics/Srinidhi_Rajagopal_Editorial.jpg',
       linkedin: "https://www.linkedin.com/in/srinidhi-rajagopal-90b6b7304/"
     },
     {
@@ -35,7 +35,7 @@ export const teams = {
       year: "3rd Year",
       department: "BME",
       desc: "",
-      img: '/src/assets/Vertical head pics/Deeksha_ Editorial and Content Head.jpg',
+      img: '/assets/team-photos/vertical-head-pics/Deeksha__Editorial_and_Content_Head.jpg',
       linkedin: "https://www.linkedin.com/in/sdeeksha2605/"
     }
   ],
@@ -46,7 +46,7 @@ export const teams = {
       year: "3rd Year",
       department: "MECH",
       desc: "",
-      img: '/src/assets/Vertical head pics/Raaghavan.PNG',
+      img: '/assets/team-photos/vertical-head-pics/Raaghavan.PNG',
       linkedin: "https://www.linkedin.com/in/raaghavan-mookiah-b-2b0789294/"
     },
     {
@@ -55,7 +55,7 @@ export const teams = {
       year: "3rd Year",
       department: "CSE",
       desc: "",
-      img: '/src/assets/Vertical head pics/Harishkanna.jpg',
+      img: '/assets/team-photos/vertical-head-pics/Harishkanna.jpg',
       linkedin: "https://www.linkedin.com/in/harishkannar11/"
     }
   ],
@@ -66,7 +66,7 @@ export const teams = {
       year: "3rd Year",
       department: "ECE",
       desc: "",
-      img: '/src/assets/Vertical head pics/Saranathan Iyengar S-Head Of Operations.jpg',
+      img: '/assets/team-photos/vertical-head-pics/Saranathan_Iyengar_S-Head_Of_Operations.jpg',
       linkedin: "https://www.linkedin.com/in/saranathan-iyengar-s-1419a5305/"
     },
     {
@@ -75,7 +75,7 @@ export const teams = {
       year: "3rd Year",
       department: "ECE",
       desc: "",
-      img: '/src/assets/Vertical head pics/Deepan Bomb_Operations.jpg',
+      img: '/assets/team-photos/vertical-head-pics/Deepan_Bomb_Operations.jpg',
       linkedin: "https://www.linkedin.com/in/deepan-bomb-65625623a/"
     }
   ],
@@ -86,7 +86,7 @@ export const teams = {
       year: "3rd Year",
       department: "IT",
       desc: "",
-      img: '/src/assets/Vertical head pics/Santhoshkumar R_Documentation_DepHead.jpg',
+      img: '/assets/team-photos/vertical-head-pics/Santhoshkumar_R_Documentation_DepHead.jpg',
       linkedin: "https://www.linkedin.com/in/santhoshkumar-ravichandran-27b727305/"
     },
     {
@@ -95,7 +95,7 @@ export const teams = {
       year: "3rd Year",
       department: "CSE",
       desc: "",
-      img: '/src/assets/Vertical head pics/Rethanya_Doc_Head.jpg',
+      img: '/assets/team-photos/vertical-head-pics/Rethanya_Doc_Head.jpg',
       linkedin: ""
     }
   ],
@@ -106,7 +106,7 @@ export const teams = {
       year: "3rd Year",
       department: "IT",
       desc: "",
-      img: '/src/assets/Vertical head pics/Vihashni_Marketing.jpg',
+      img: '/assets/team-photos/vertical-head-pics/Vihashni_Marketing.jpg',
       linkedin: ""
     },
 
@@ -116,7 +116,7 @@ export const teams = {
       year: "3rd Year",
       department: "IT",
       desc: "",
-      img: '/src/assets/Vertical head pics/Yaazhini.JPG',
+      img: '/assets/team-photos/vertical-head-pics/Yaazhini.JPG',
       linkedin: "https://www.linkedin.com/in/yaazhini-azhagarasan-208a24322/"
     }
   ],
@@ -127,7 +127,7 @@ export const teams = {
       year: "3rd Year",
       department: "ECE",
       desc: "",
-      img: '/src/assets/Vertical head pics/Bharath Ram S K logistics_.jpg',
+      img: '/assets/team-photos/vertical-head-pics/Bharath_Ram_S_K_logistics_.jpg',
       linkedin: ""
     },
     {
@@ -136,7 +136,7 @@ export const teams = {
       year: "3rd Year",
       department: "ECE",
       desc: "",
-      img: '/src/assets/Vertical head pics/Saikirtan Srinivasan Logistics.jpg',
+      img: '/assets/team-photos/vertical-head-pics/Saikirtan_Srinivasan_Logistics.jpg',
       linkedin: ""
     }
   ],
@@ -147,7 +147,7 @@ export const teams = {
       year: "3rd Year",
       department: "CSE",
       desc: "",
-      img: '/src/assets/Vertical head pics/Technical_DepHead_Sanjana_Y.jpg',
+      img: '/assets/team-photos/vertical-head-pics/Technical_DepHead_Sanjana_Y.jpg',
       linkedin: "https://www.linkedin.com/in/sanjana-yoganand-b484542a4/"
     },
 
@@ -158,7 +158,7 @@ export const teams = {
       year: "3rd Year",
       department: "IT",
       desc: "",
-      img: '/src/assets/Vertical head pics/Nanditha_S.jpg',
+      img: '/assets/team-photos/vertical-head-pics/Nanditha_S.jpg',
       linkedin: "https://www.linkedin.com/in/nanditha-s06/"
     }
   ]
